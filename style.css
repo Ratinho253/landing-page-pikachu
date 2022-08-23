@@ -34,7 +34,7 @@ body{
     .logo{
         display: inline-flex;
         gap: 16px;
-        align-items: center;
+        align-items: end center;
         font-size: 32px;
         text-decoration: none;
         color: var(--second-color);
@@ -42,10 +42,72 @@ body{
     }
 
     main{
-        background-color: black;
+       
         flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    }
+    .pikachu-image{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+    }
+
+    .title{
+        position: relative;
+        grid-column: 1/-1;
+        place-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .title__text{
+        font-size: 20vw;
+        color: var(--white);
+
+    }
+    .title__transparent{
+        font-size: 27vw;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        transform: translateY(-40%);
+        color: #FFFFFF55;
+    }
+        
+
+  
+    .description{
+        grid-column: 1/7;
+        place-self: center start;
+        color: var(--second-color);
+    }
+    .description__title{
+        font-size: 4rem;
+    }
+    .description__text{
+        font-size: 1.2rem;
+        width: 500px;
+    }
+    .action{
+        grid-column: 7/-1;
+        place-self: center end;
+        width: 411px;
+        height: 100px;
+        background-color: var(--second-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        font-size: 3rem;
+        text-decoration: none;
+        z-index: 1;
     }
     footer{
-        background-color: blueviolet;
-       
+        font-size: 1rem;
+        text-align: center;
+        color: var(--second-color); 
     }
